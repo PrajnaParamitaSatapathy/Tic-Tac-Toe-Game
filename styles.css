@@ -1,0 +1,87 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+   font-family: 'Poppins', 'sans-serif';
+}
+.wrapper{
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./gradient-bg.jpg);
+  display: grid;
+  place-items: center;
+}
+.game-info {
+  color: white;
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  text-align: center;
+  width: 80%;
+  max-width: 250px;
+  word-wrap: break-word;
+}
+
+.tic-tac-toe{
+  width: 90%; /*for responsive screen size ko chota karenge toh uss hisaab se adjust hojayega*/
+  max-width: 20rem; 
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  aspect-ratio: 1/1; /*square box hai isiliye*/
+}
+.box{
+  color: white;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+}
+
+.box1, .box2, .box4, .box5{
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+
+.box3, .box6{
+   border-bottom: 2px solid white;
+}
+
+.box7, .box8{
+  border-right: 2px solid white;
+}
+
+.btn{
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.5rem 2rem; /*top-bottom se 0.5, left-right se 3rem*/
+  cursor: pointer;
+  display: none; /*because starting mai ye visible nhi hoga jab game khatam hojata hai tab visible hota hai*/
+}
+
+.btn.active{
+  display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
